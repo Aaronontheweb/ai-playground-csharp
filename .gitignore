@@ -250,6 +250,9 @@ UpgradeLog*.htm
 *.bim.layout
 *.bim_*.settings
 
+# Cursor rules
+.cursor/
+
 # Microsoft Fakes
 FakesAssemblies/
 
