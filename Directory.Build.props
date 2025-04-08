@@ -2,8 +2,8 @@
   <PropertyGroup>
     <Copyright>Copyright © 2019-$([System.DateTime]::Now.Year) Aaron Stannard</Copyright>
     <Authors>Petabridge</Authors>
-    <VersionPrefix>1.6.18</VersionPrefix>
-    <PackageReleaseNotes></PackageReleaseNotes>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
     <PackageIconUrl>
     </PackageIconUrl>
     <PackageProjectUrl>
