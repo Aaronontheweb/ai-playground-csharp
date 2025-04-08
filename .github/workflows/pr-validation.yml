@@ -28,12 +28,12 @@ jobs:
     - name: Update version
       shell: pwsh
       run: ./build.ps1
-      
-    - name: Restore dependencies
-      run: dotnet restore
+
+    - name: Install Aspire workload
+      run: dotnet workload install aspire
       
     - name: Build
-      run: dotnet build --no-restore -c Release
+      run: dotnet build -c Release
       
     - name: Test
       run: dotnet test --no-build -c Release --logger "trx;LogFileName=test-results.trx"

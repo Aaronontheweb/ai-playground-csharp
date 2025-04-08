@@ -4,7 +4,6 @@
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
-        <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <IsAspireHost>true</IsAspireHost>
@@ -12,12 +11,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Aspire.Hosting.AppHost" Version="9.1.0"/>
+        <PackageReference Include="Aspire.Hosting.AppHost"/>
         <PackageReference Include="CommunityToolkit.Aspire.Hosting.Ollama" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\AI.HelloWorld.Console\AI.HelloWorld.Console.csproj" />
     </ItemGroup>
-
 </Project>
