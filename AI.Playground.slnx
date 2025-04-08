@@ -9,4 +9,7 @@
     <File Path="global.json" />
     <File Path="nuget.config" />
   </Folder>
+  <Folder Name="/shared/">
+    <Project Path="src\shared\Telemetry\Telemetry.csproj" Type="Classic C#" />
+  </Folder>
 </Solution>
