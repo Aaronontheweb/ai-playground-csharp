@@ -1,0 +1,18 @@
+<Project>
+  <PropertyGroup>
+    <Copyright>Copyright © 2019-$([System.DateTime]::Now.Year) Aaron Stannard</Copyright>
+    <Authors>Petabridge</Authors>
+    <VersionPrefix>1.6.18</VersionPrefix>
+    <PackageReleaseNotes></PackageReleaseNotes>
+    <PackageIconUrl>
+    </PackageIconUrl>
+    <PackageProjectUrl>
+    </PackageProjectUrl>
+    <PackageLicenseUrl>
+    </PackageLicenseUrl>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RuntimeFramework>net9.0</RuntimeFramework>
+  </PropertyGroup>
+</Project>

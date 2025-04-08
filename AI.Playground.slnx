@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/0-HelloWorld/">
+    <Project Path="src\0-hello-world\AI.HelloWorld.AppHost\AI.HelloWorld.AppHost.csproj" Type="Classic C#" />
+    <Project Path="src\0-hello-world\AI.HelloWorld.Console\AI.HelloWorld.Console.csproj" Type="Classic C#" />
+  </Folder>
+  <Folder Name="/build/">
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+    <File Path="global.json" />
+    <File Path="nuget.config" />
+  </Folder>
+</Solution>
