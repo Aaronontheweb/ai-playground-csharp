@@ -28,6 +28,9 @@ jobs:
     - name: Update version
       shell: pwsh
       run: ./build.ps1
+
+    - name: Install Aspire workload
+      run:  dotnet workload restore
       
     - name: Restore dependencies
       run: dotnet restore
