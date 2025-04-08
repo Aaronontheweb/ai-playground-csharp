@@ -11,4 +11,8 @@
       <PackageReference Include="Microsoft.Extensions.Hosting" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\..\shared\Telemetry\Telemetry.csproj" />
+    </ItemGroup>
+
 </Project>
