@@ -28,7 +28,10 @@ jobs:
     - name: Update version
       shell: pwsh
       run: ./build.ps1
-    
+
+    - name: Install Aspire workload
+      run: dotnet workload update && dotnet workload install aspire
+      
     - name: Build
       run: dotnet build -c Release
       
