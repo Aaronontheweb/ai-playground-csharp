@@ -13,6 +13,6 @@
     <NoWarn>$(NoWarn);CS1591</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
-    <RuntimeFramework>net9.0</RuntimeFramework>
+     <TargetFramework>net9.0</TargetFramework>
   </PropertyGroup>
 </Project>
