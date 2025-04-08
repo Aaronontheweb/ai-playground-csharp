@@ -12,12 +12,16 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Aspire.Hosting.AppHost" Version="9.1.0"/>
+        <PackageReference Include="Aspire.Hosting.AppHost"/>
         <PackageReference Include="CommunityToolkit.Aspire.Hosting.Ollama" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\AI.HelloWorld.Console\AI.HelloWorld.Console.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageVersion Update="Aspire.Hosting.AppHost" Version="9.1.0" />
     </ItemGroup>
 
 </Project>
