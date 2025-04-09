@@ -35,11 +35,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
 app.MapPost("/prompt", async (string prompt, IChatClient chatClient, CancellationToken ct) =>
     {
         var resp = await chatClient.GetResponseAsync(prompt, cancellationToken: ct);
