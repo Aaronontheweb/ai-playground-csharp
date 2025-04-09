@@ -11,7 +11,7 @@ var ollama =
 var chat = ollama
     .AddModel("chat", "llama3.2:3b"); // 3b parameter model
 
-builder.AddProject<Projects.AI_HelloWorld_Console>("console")
+builder.AddProject<Projects.AI_HelloWorld_PromptApi>("prompt-api")
     .WithReference(chat)
     .WaitFor(chat);
 

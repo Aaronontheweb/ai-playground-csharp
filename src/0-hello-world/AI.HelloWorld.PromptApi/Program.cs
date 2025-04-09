@@ -1,4 +1,5 @@
 using AI.Telemetry;
+using Microsoft.Extensions.AI;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore;
 
@@ -6,6 +7,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Logging.ConfigureAiLogging();
 builder.Services.ConfigureAiTelemetry();
+
+builder.AddOllamaApiClient("chat")
+    .AddChatClient()
+    .UseFunctionInvocation()
+    .UseOpenTelemetry()
+    .UseLogging();
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
@@ -33,23 +40,11 @@ var summaries = new[]
     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
 };
 
-app.MapGet("/weatherforecast", () =>
+app.MapPost("/prompt", async (string prompt, IChatClient chatClient, CancellationToken ct) =>
     {
-        var forecast = Enumerable.Range(1, 5).Select(index =>
-                new WeatherForecast
-                (
-                    DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-                    Random.Shared.Next(-20, 55),
-                    summaries[Random.Shared.Next(summaries.Length)]
-                ))
-            .ToArray();
-        return forecast;
+        var resp = await chatClient.GetResponseAsync(prompt, cancellationToken: ct);
+        return Results.Ok(resp);
     })
-    .WithName("GetWeatherForecast");
+    .WithName("SendPrompt");
 
 app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
