@@ -1,0 +1,6 @@
+@AI.HelloWorld.PromptApi_HostAddress = http://localhost:5055
+
+GET {{AI.HelloWorld.PromptApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

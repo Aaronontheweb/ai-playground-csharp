@@ -2,6 +2,7 @@
   <Folder Name="/0-HelloWorld/">
     <Project Path="src\0-hello-world\AI.HelloWorld.AppHost\AI.HelloWorld.AppHost.csproj" Type="Classic C#" />
     <Project Path="src\0-hello-world\AI.HelloWorld.Console\AI.HelloWorld.Console.csproj" Type="Classic C#" />
+    <Project Path="src\0-hello-world\AI.HelloWorld.PromptApi\AI.HelloWorld.PromptApi.csproj" Type="Classic C#" />
   </Folder>
   <Folder Name="/build/">
     <File Path="Directory.Build.props" />
