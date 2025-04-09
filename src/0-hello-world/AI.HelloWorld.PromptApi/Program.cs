@@ -1,7 +1,6 @@
 using AI.Telemetry;
 using Microsoft.Extensions.AI;
 using Microsoft.OpenApi.Models;
-using Swashbuckle.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
