@@ -22,7 +22,7 @@ public static class TelemetryExtensions
 
         return builder;
     }
-    
+
     public static IServiceCollection ConfigureAiTelemetry(this IServiceCollection services,
         Action<MeterProviderBuilder>? additionalMeters = null,
         Action<TracerProviderBuilder>? additionalTracers = null)
@@ -36,14 +36,22 @@ public static class TelemetryExtensions
                     .AddTelemetrySdk()
                     .AddServiceVersionDetector();
             })
-            .UseOtlpExporter()
             .WithMetrics(c =>
             {
-                c.AddRuntimeInstrumentation();
+                c.AddRuntimeInstrumentation()
+                    .AddHttpClientInstrumentation()
+                    .AddAspNetCoreInstrumentation();
 
                 additionalMeters?.Invoke(c);
             })
-            .WithTracing(c => { additionalTracers?.Invoke(c); });
+            .WithTracing(c =>
+            {
+                c.AddHttpClientInstrumentation()
+                    .AddAspNetCoreInstrumentation();
+
+                additionalTracers?.Invoke(c);
+            })
+            .UseOtlpExporter();
 
         return services;
     }

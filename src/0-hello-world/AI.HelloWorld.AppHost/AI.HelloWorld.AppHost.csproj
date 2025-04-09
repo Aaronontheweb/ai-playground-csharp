@@ -16,6 +16,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\AI.HelloWorld.Console\AI.HelloWorld.Console.csproj" />
+      <ProjectReference Include="..\AI.HelloWorld.PromptApi\AI.HelloWorld.PromptApi.csproj" />
     </ItemGroup>
 </Project>
