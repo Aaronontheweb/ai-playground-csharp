@@ -4,6 +4,10 @@
     <Project Path="src\0-hello-world\AI.HelloWorld.PromptApi\AI.HelloWorld.PromptApi.csproj" Type="Classic C#" />
     <File Path="src\0-hello-world\README.md" />
   </Folder>
+  <Folder Name="/1-StatefulPrompts/">
+    <Project Path="src\1-stateful-prompts\AI.StatefulPrompts.Business\AI.StatefulPrompts.Business.csproj" Type="Classic C#" />
+    <Project Path="src\1-stateful-prompts\AI.StatefulPrompts.WebUI\AI.StatefulPrompts.WebUI.csproj" Type="Classic C#" />
+  </Folder>
   <Folder Name="/build/">
     <File Path="Directory.Build.props" />
     <File Path="Directory.Packages.props" />
