@@ -1,0 +1,6 @@
+@AI.StatefulPrompts.WebUI_HostAddress = http://localhost:5082
+
+GET {{AI.StatefulPrompts.WebUI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
